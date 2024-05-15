@@ -226,8 +226,7 @@ GameObject:
   - component: {fileID: 779300675}
   - component: {fileID: 779300674}
   - component: {fileID: 779300673}
-  - component: {fileID: 779300672}
-  - component: {fileID: 779300676}
+  - component: {fileID: 779300677}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -235,27 +234,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &779300672
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 779300671}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &779300673
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -321,7 +299,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &779300676
+--- !u!114 &779300677
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -330,10 +308,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 779300671}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 589afda2eb6135e489febb8658b10c8f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3f2669f5d38cea547aac7e5e209eaa6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 3.5
+  _laser: {fileID: 1208146823827051929, guid: bed3143009136004b8a368450831de53, type: 3}
 --- !u!1 &1591576746
 GameObject:
   m_ObjectHideFlags: 0
