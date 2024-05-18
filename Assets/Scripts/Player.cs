@@ -11,6 +11,9 @@ public class Player : MonoBehaviour
     
     [SerializeField]
     private GameObject _laser;
+    [SerializeField]
+    private float _fireRate = 0.15f;
+    private float _canFire = -1f;                                                                                                                                                                                                                                                                                                                                        
    
     void Start()
     {
@@ -22,18 +25,17 @@ public class Player : MonoBehaviour
     void Update()
     {
         CalculateMovement();
-
-        //if I hit the Space key
-        //Spawn GameObject
-
-        if (Input.GetKeyDown(KeyCode.Space))
+        
+        if (Input.GetKeyDown(KeyCode.Space) && Time.time > _canFire)
         {
-            Instantiate(_laser, transform.position, Quaternion.identity);
+            FireLaser();
         }
+
+       
     }
 
     void CalculateMovement()
-    {
+    {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 
         float verticalInput = Input.GetAxis("Vertical");
         float horizontalInput = Input.GetAxis("Horizontal");
@@ -50,7 +52,6 @@ public class Player : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, -3.8f, 0);
         }
-
         
         if (transform.position.x >= 11)
         {
@@ -60,5 +61,15 @@ public class Player : MonoBehaviour
         {
             transform.position = new Vector3(11, transform.position.y, 0);
         }
+
+        
+    }
+
+    void FireLaser()
+    {
+
+        _canFire = Time.time + _fireRate;
+        Instantiate(_laser, transform.position + new Vector3(0, 0.8f, 0), Quaternion.identity);
+
     }
 }
