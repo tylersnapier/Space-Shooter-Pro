@@ -21,9 +21,27 @@ public class Enemy : MonoBehaviour
             float randomX = Random.Range(-9f, 9f);
             transform.position = new Vector3(randomX, 8f, 0);
         }
-        //Move enemy down at 4 meters per second
-        //If bottom of screen
-        //respawn at top
-        //respawn at top at random x position
+        
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            Destroy(this.gameObject);
+        }
+
+        if (other.tag == "Laser")
+        {
+            Destroy(other.gameObject);
+            Destroy(this.gameObject);
+        }
+
+        //if other is Player
+        //damage the Player
+        //destroy Enemy
+
+        //if other is Laser
+        //Destroy Laser
+        //Destroy Enemy
     }
 }
