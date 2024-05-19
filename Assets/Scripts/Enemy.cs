@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
         
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         transform.Translate(Vector3.down * _speed * Time.deltaTime);
@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            //Damage Player
+            
             Player player = other.transform.GetComponent<Player>();
             if (player != null)
             {
@@ -43,12 +43,6 @@ public class Enemy : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        //if other is Player
-        //damage the Player
-        //destroy Enemy
-
-        //if other is Laser
-        //Destroy Laser
-        //Destroy Enemy
+        
     }
 }
