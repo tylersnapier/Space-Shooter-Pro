@@ -11,8 +11,6 @@ public class Player : MonoBehaviour
     private float _speed = 5;
     [SerializeField]
     private float _speedMultiplier = 2f;
-    [SerializeField]
-    private bool _speedBoostActive = false;
     
     [SerializeField]
     private GameObject _laser;
@@ -21,14 +19,19 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float _fireRate = 0.15f;
     private float _canFire = -1f;
-    [SerializeField]
-    private bool _tripleShotActive = false;
+    
     [SerializeField]
     private int _lives = 3;
 
+    [SerializeField]
     private SpawnManager _spawnManager;
+    private bool _tripleShotActive = false;
+    private bool _speedBoostActive = false;
+    private bool _isShieldActive = false;
 
-
+    [SerializeField]
+    private GameObject _shieldVisualizer;
+    //variable reference to Shield visualizer
 
     
    
@@ -87,7 +90,7 @@ public class Player : MonoBehaviour
         }
 
         
-    }
+    }                                                       
 
     void FireLaser()
     {
@@ -109,6 +112,17 @@ public class Player : MonoBehaviour
 
     public void Damage()
     {
+        if (_isShieldActive == true)
+        {
+            _isShieldActive = false;
+            _shieldVisualizer.SetActive(false);
+            //Disable the visualizer
+            return;
+        }
+        //if Shield is active
+        //Do nothing...
+        //Deactivate Shield
+        //return;
         _lives -= 1;
 
         if (_lives < 1)
@@ -150,6 +164,13 @@ public class Player : MonoBehaviour
 
         _speed /= _speedMultiplier;
 
+    }
+
+    public void ShieldActive()
+    {
+        _isShieldActive = true;
+        _shieldVisualizer.SetActive(true);
+        //enable the visualizer
     }
 
     
