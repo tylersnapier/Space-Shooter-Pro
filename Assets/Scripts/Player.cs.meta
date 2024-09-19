@@ -1,13 +1,11 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 3f2669f5d38cea547aac7e5e209eaa6a
-=======
-guid: 589afda2eb6135e489febb8658b10c8f
->>>>>>> e127b24e0520545d1c3d398d1fa4a14ee41b7072
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - _laser: {fileID: 2404280684286802242, guid: bed3143009136004b8a368450831de53, type: 3}
+  - _tripleShotPrefab: {fileID: 4689998092009720358, guid: d5aa5b7723db8ed4c9c6011a3da1173d, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
