@@ -9,9 +9,10 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private TMP_Text _scoreText;
     [SerializeField]
-    private Sprite[] _livesSprites;
+    private Image _livesImg;
     [SerializeField]
-    private Image _LivesImg;
+    private Sprite[] _livesSprites;
+   
     void Start()
     {
         
@@ -25,6 +26,8 @@ public class UIManager : MonoBehaviour
 
     public void UpdateLives(int currentLives)
     {
-
+        //display img sprite
+        //give it a new one based on the current Lives index
+        _livesImg.sprite = _livesSprites[currentLives];
     }
 }
