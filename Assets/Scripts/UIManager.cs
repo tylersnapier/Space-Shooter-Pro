@@ -12,11 +12,14 @@ public class UIManager : MonoBehaviour
     private Image _livesImg;
     [SerializeField]
     private Sprite[] _livesSprites;
+    [SerializeField]
+    private TMP_Text _gameOverText;
    
     void Start()
     {
         
         _scoreText.text = "Score:" + 0;
+        _gameOverText.gameObject.SetActive(false);
     }
 
     public void UpdateScore(int playerScore)
@@ -26,8 +29,11 @@ public class UIManager : MonoBehaviour
 
     public void UpdateLives(int currentLives)
     {
-        //display img sprite
-        //give it a new one based on the current Lives index
         _livesImg.sprite = _livesSprites[currentLives];
+
+        if (currentLives == 0)
+        {
+            _gameOverText.gameObject.SetActive(true);
+        }
     }
 }
