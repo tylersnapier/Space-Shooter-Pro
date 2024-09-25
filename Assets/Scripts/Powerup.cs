@@ -10,10 +10,10 @@ public class Powerup : MonoBehaviour
    
     [SerializeField] //0 = Triple Shot 1= Speed Boost 2 = Shields
     private int _powerupID;
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private AudioClip _clip;
+   
+    
 
     
     void Update()
@@ -35,6 +35,8 @@ public class Powerup : MonoBehaviour
         if (other.tag == "Player")
         {
             Player player = other.transform.GetComponent<Player>();
+
+            AudioSource.PlayClipAtPoint(_clip, transform.position);
 
             if (player != null)
             {
