@@ -10,12 +10,14 @@ public class Enemy : MonoBehaviour
     private Player _player;
 
     private Animator _anim;
+    [SerializeField]
+    private AudioSource _audioSource;
 
     //handle to animator component
     void Start()
     {
         _player = GameObject.Find("Player").GetComponent<Player>();
-        //null check player
+        _audioSource = GetComponent<AudioSource>();
         if (_player == null)
         {
             Debug.LogError("The Player is NULL");
@@ -54,7 +56,9 @@ public class Enemy : MonoBehaviour
             //trigger anim
             _anim.SetTrigger("OnEnemyDeath");
             _speed = 0;
+            _audioSource.Play();
             Destroy(this.gameObject, 2.8f);
+            
         }
 
         if (other.tag == "Laser")
@@ -73,6 +77,7 @@ public class Enemy : MonoBehaviour
             //trigger anim
             _anim.SetTrigger("OnEnemyDeath");
             _speed = 0;
+            _audioSource.Play();
             Destroy(this.gameObject, 2.8f);
         }
 
