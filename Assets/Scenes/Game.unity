@@ -2011,6 +2011,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Asteroid
       objectReference: {fileID: 0}
+    - target: {fileID: 6195553614548634944, guid: 58da1b95997ffbe4a9988cf0925222ff, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6668074277993538424, guid: 58da1b95997ffbe4a9988cf0925222ff, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.1581
