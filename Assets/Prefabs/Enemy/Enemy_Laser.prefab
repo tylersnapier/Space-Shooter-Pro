@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7779523104554875494}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy_Laser
-  m_TagString: Untagged
+  m_TagString: EnemyLaser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24,15 +24,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7962676617364627882}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.0060376474, w: -0.99998176}
+  m_LocalPosition: {x: -0.016539313, y: -0.00009715557, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3273656364310895755}
   - {fileID: 5692812227299424880}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -359.308}
 --- !u!1001 &583044250611049174
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44,6 +44,10 @@ PrefabInstance:
     - target: {fileID: 2404280684286802242, guid: bed3143009136004b8a368450831de53, type: 3}
       propertyPath: m_Name
       value: Laser_Right
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404280684286802242, guid: bed3143009136004b8a368450831de53, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5122718300659243174, guid: bed3143009136004b8a368450831de53, type: 3}
       propertyPath: m_LocalPosition.x
@@ -106,6 +110,10 @@ PrefabInstance:
     - target: {fileID: 2404280684286802242, guid: bed3143009136004b8a368450831de53, type: 3}
       propertyPath: m_Name
       value: Laser_Left
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404280684286802242, guid: bed3143009136004b8a368450831de53, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5122718300659243174, guid: bed3143009136004b8a368450831de53, type: 3}
       propertyPath: m_LocalPosition.x
